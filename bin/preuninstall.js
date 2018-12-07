@@ -21,7 +21,7 @@ if (process.env["npm_config_global"] !== "true") {
 
 const execSync = require("child_process").execSync;
 
-if (process.platform === "linux" || process.platform === "darwin") {
+if (process.platform === "linux" || process.platform === "darwin" || process.platform === "freebsd") {
     if (process.getuid() !== 0 || process.env.DOCKER === "YES") {
         process.exit(0);
     }
