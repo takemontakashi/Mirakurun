@@ -22,7 +22,7 @@ if (process.env["npm_config_global"] !== "true") {
 
 const child_process = require("child_process");
 
-if (process.platform === "linux" || process.platform === "darwin") {
+if (process.platform === "linux" || process.platform === "darwin" || process.platform === "freebsd" ) {
     if (process.getuid() !== 0) {
         console.log("Note: `sudo npm install mirakurun -g --unsafe --production` to install Mirakurun as Server.");
         process.exit(0);
