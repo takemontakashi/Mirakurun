@@ -36,7 +36,7 @@ if (semver.satisfies(process.version, pkg.engines.node) === true) {
 
 // init
 
-if (process.platform === "linux" || process.platform === "darwin" || process.platfoem === "freebsd") {
+if (process.platform === "linux" || process.platform === "darwin" || process.platform === "freebsd") {
     if (process.getuid() !== 0) {
         process.exit(0);
     }
